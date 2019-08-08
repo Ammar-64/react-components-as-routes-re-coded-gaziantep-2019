@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './Component/Home';
 
-const Home = () => {
-  return (
-    <div>
-      <h1>Home!</h1>
-    </div>
-  );
-};
 const About = () => {
   return (
     <div>
@@ -38,7 +32,7 @@ const Login = () => {
 ReactDOM.render((
   <Router>
    <React.Fragment>
-      <Route exact path="/" render={Home} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/about" render={About} />
       <Route exact path="/login" render={Login} />
     </React.Fragment>
